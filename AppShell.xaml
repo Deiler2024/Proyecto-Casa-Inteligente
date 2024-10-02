@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="Proyecto_de_prueba.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:Proyecto_de_prueba"
+    Shell.FlyoutBehavior="Disabled"
+    Title="Proyecto_de_prueba">
+
+    <ShellContent
+        Title="Home"
+        ContentTemplate="{DataTemplate local:MainPage}"
+        Route="MainPage" />
+
+    <!-- Página de registro -->
+    <ShellContent
+        Title="Registro"
+        ContentTemplate="{DataTemplate local:RegisterPage}"
+        Route="RegisterPage" />
+
+    <!-- Página de registro -->
+    <ShellContent
+    Title="Restableñecer contraseña"
+    ContentTemplate="{DataTemplate local:ResetPasswordPage}"  
+    Route="ResetPasswordPage" />   
+
+</Shell>

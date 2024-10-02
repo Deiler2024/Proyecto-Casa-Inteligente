@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyecto_de_prueba.RegisterPage">
+
+    <VerticalStackLayout Padding="20" Spacing="10">
+        <Label Text="Crear Cuenta"
+               FontSize="Large"
+               HorizontalOptions="Center" />
+
+        <!-- Entrada para el nombre de usuario -->
+        <Entry x:Name="UsernameEntry" Placeholder="Nombre de usuario" />
+
+        <!-- Entrada para el correo electrónico -->
+        <Entry x:Name="EmailEntry" Placeholder="Correo electrónico" Keyboard="Email" />
+
+        <!-- Botón para enviar el código de verificación al correo -->
+        <Button Text="Enviar código de verificación" 
+                BackgroundColor="#34C759" 
+                TextColor="White"
+                Clicked="OnSendVerificationCodeButtonClicked"/>
+
+        <!-- Entrada para ingresar el código de verificación (invisible al inicio) -->
+        <Entry x:Name="VerificationCodeEntry" 
+               Placeholder="Código de verificación" 
+               IsVisible="False" />
+
+        <!-- Botón para verificar el código de verificación (invisible al inicio) -->
+        <Button x:Name="VerifyCodeButton" 
+                Text="Verificar Código" 
+                IsVisible="False" 
+                BackgroundColor="#007AFF"
+                TextColor="White" 
+                Clicked="OnVerifyCodeButtonClicked" />
+
+        <!-- Entrada para la contraseña -->
+        <Entry x:Name="PasswordEntry" 
+               Placeholder="Contraseña" 
+               IsPassword="True" />
+
+        <!-- Entrada para confirmar la contraseña -->
+        <Entry x:Name="ConfirmPasswordEntry" 
+               Placeholder="Confirmar contraseña" 
+               IsPassword="True" />
+
+        <!-- Botón para registrar el usuario (invisible hasta que el código sea verificado) -->
+        <Button x:Name="RegisterButton" 
+                Text="Crear Cuenta" 
+                IsVisible="False" 
+                BackgroundColor="#34C759" 
+                TextColor="White" 
+                Clicked="OnRegisterButtonClicked"/>
+    </VerticalStackLayout>
+
+</ContentPage>
+

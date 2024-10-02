@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Proyecto_de_prueba.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <!-- Imagen de la aplicación -->
+            <Image
+                Source="dotnet_bot.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a race car number eight" />
+
+            <!-- Título -->
+            <Label
+                Text="Login"
+                Style="{StaticResource Headline}"
+                SemanticProperties.HeadingLevel="Level1"
+                HorizontalOptions="Center" />
+
+            <!-- Campo de Username -->
+            <Entry
+                x:Name="UsernameEntry"
+                Placeholder="Username"
+                HorizontalOptions="Fill" />
+
+            <!-- Campo de Password -->
+            <Entry
+                x:Name="PasswordEntry"
+                Placeholder="Password"
+                IsPassword="True"
+                HorizontalOptions="Fill" />
+
+            <!-- Checkbox para Recordar Usuario -->
+            <HorizontalStackLayout
+                Spacing="5"
+                VerticalOptions="Center">
+                <CheckBox x:Name="RememberMeCheckBox" />
+                <Label
+                    Text="Recordarme"
+                    FontSize="Medium"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Start" />
+            </HorizontalStackLayout>
+
+            <!-- Botón de Login -->
+            <Button
+                Text="Ingresar"
+                BackgroundColor="#007AFF"
+                TextColor="White"
+                FontAttributes="Bold"
+                CornerRadius="10"
+                HeightRequest="50"
+                Clicked="OnLoginButtonClicked"
+                HorizontalOptions="Fill" />
+
+            <!-- Separador -->
+            <BoxView
+                HeightRequest="1"
+                Color="#E0E0E0"
+                HorizontalOptions="Fill"
+                VerticalOptions="Center" />
+
+            <!-- Botón de Crear Cuenta -->
+            <Button
+                Text="Crear Cuenta"
+                BackgroundColor="#34C759"
+                TextColor="White"
+                FontAttributes="Bold"
+                CornerRadius="10"
+                HeightRequest="50"
+                Clicked="OnCreateAccountButtonClicked"
+                HorizontalOptions="Fill" />
+
+            <!-- Botón de Recuperar Contraseña -->
+            <Button
+                Text="Recuperar Contraseña"
+                BackgroundColor="#FF3B30"
+                TextColor="White"
+                FontAttributes="Bold"
+                CornerRadius="10"
+                HeightRequest="50"
+                Clicked="OnRecoverPasswordButtonClicked"
+                HorizontalOptions="Fill" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
+
+
+
